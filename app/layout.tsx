@@ -17,8 +17,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'NextJS Homework - 7',
-  description: 'NoteHub - manage your notes',
+  title: 'NoteHub',
+  description: 'NextJS Homework - 8',
+  openGraph: {
+    title: 'NoteHub',
+    description: 'NoteHub - manage your notes',
+    url: 'https://08-zustand-seven-virid.vercel.app/',
+    images: [
+      {
+        url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NoteHub image',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
