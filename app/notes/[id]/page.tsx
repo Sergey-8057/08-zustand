@@ -6,6 +6,29 @@ interface NoteDetailsPageProps {
   params: Promise<{ id: string }>;
 }
 
+export async function generateMetadata({ params }: NoteDetailsPageProps) {
+  const { id } = await params;
+  const note = await fetchNoteById(id);
+  return {
+    title: `${note.title}`,
+    description: `${note.content}`,
+    openGraph: {
+      title: `${note.title}`,
+      description: `${note.content}`,
+      url: `https://08-zustand-seven-virid.vercel.app/notes/${id}`,
+      siteName: 'NoteHub',
+      images: [
+        {
+          url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+          width: 1200,
+          height: 630,
+          alt: `${note.title}`,
+        },
+      ],
+    },
+  };
+}
+
 const NoteDetailsPage = async ({ params }: NoteDetailsPageProps) => {
   const { id } = await params;
 
