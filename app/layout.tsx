@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import type { Metadata } from 'next';
 
 import TanStackProvider from '../components/TanStackProvider/TanStackProvider';
 import Header from '@/components/Header/Header';
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NoteHub',
     description: 'NoteHub - manage your notes',
-    url: 'https://08-zustand-seven-virid.vercel.app/',
+    url: 'https://08-zustand-seven-virid.vercel.app',
     images: [
       {
         url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
